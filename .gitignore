@@ -1,0 +1,27 @@
+# root ignore except "wp-content", "config", "migrations" directories
+/*
+!.gitignore
+!/package.json
+!/composer.json
+!/README.md
+!/.github
+!/wp-cli.yml
+!/robots.txt
+
+!wp-content/
+!/config
+
+# ignore everything in the wp-content directory except the "themes" directory
+wp-content/*
+!wp-content/themes/
+
+# ignore everything in the "wp-content/themes" directory, except custom directory
+wp-content/themes/*
+!/wp-content/themes/custom/
+
+# ignore everything in the "config" directory, except local.sql && *.sh files
+config/*
+!/config/migrations/
+/config/migrations/*.sql
+!/config/migrations/local.sql
+!/config/*.sh

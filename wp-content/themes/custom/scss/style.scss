@@ -1,0 +1,18 @@
+// BS 5 overwrite variables file needs to be at root
+@import 'base/mixins/all';
+@import 'base/variables';
+@import 'base/settings/all';
+
+@import 'librairies/all';
+
+@import 'layout/all';
+
+@import 'blocks/all'; // Only for Gutenberg blocks
+
+@import 'components/all';
+
+//@import 'shortcodes/all'; // WP Backery || Custom WP shortcodes
+
+@import 'parts/all';
+
+@import 'pages/all';

@@ -1,0 +1,101 @@
+.pagination {
+    padding-bottom: 2rem;
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+
+        a, > span {
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: 0 2px;
+            padding: .25rem;
+            background-color: $pagination-item-bg;
+            text-decoration: none $imp;
+            color: $pagination-item-color;
+            border: 1px solid $pagination-item-border-color;
+            transition: .35s;
+        }
+        > span.dots {
+            background-color: $pagination-item-dots-bg;
+            color: $pagination-item-dots-color;
+        }
+        a {
+
+            &.prev,
+            &.next {
+                background-color: $pagination-item-prev-next-bg;
+                color: $pagination-item-prev-next-color;
+                border-width: $pagination-item-prev-next-border-width;
+            }
+        }
+    }
+
+    .screen-reader-text {
+        display: none;
+    }
+    a, span {
+        display: inline-flex;
+    }
+
+    a:hover {
+        background-color: $pagination-item-bg-hover $imp;
+        color: $pagination-item-color-hover $imp;
+    }
+    span[aria-current="page"] {
+        background-color: $pagination-item-bg-active;
+        color: $pagination-item-color-active;
+    }
+    .prev {
+        margin-left: 0;
+    }
+    .next {
+        margin-right: 0;
+    }
+}
+
+
+.single-pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.paginate-links {
+    margin-bottom: 2rem;
+
+    a, > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: .25rem;
+        background-color: $pagination-item-bg;
+        text-decoration: none $imp;
+        color: $pagination-item-color;
+        transition: .35s;
+    }
+    a:hover {
+        background-color: $pagination-item-bg-hover;
+        color: $pagination-item-color-hover;
+    }
+    .current {
+        background-color: $pagination-item-bg-active;
+        color: $pagination-item-color-active;
+    }
+}
+
+@media (min-width: $screen-lg) {
+
+    .pagination {
+        padding: 0 0 2.5rem;
+    }
+}
+@media (max-width: $screen-sm-max) {
+
+    .pagination {
+        padding-bottom: 1.5rem;
+    }
+}

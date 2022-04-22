@@ -1,0 +1,45 @@
+{
+    "name": "acme/htbt",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.12.2",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=MDBmNGNmODIxZWQ4OWYwZGViOGUzZWVhYmY1NDg1MjkyMDZlM2MwNGU5YzI0YmIyY2NkOTE0&t=5.12.2"
+                }
+            }
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/wordpress-seo": ">=17.5","wpackagist-plugin/mailin": ">=3.1.23","wpackagist-plugin/svg-support": ">=2.3.19","wpackagist-plugin/admin-taxonomy-filter": ">=1.0.1","wpackagist-plugin/lazy-blocks": ">=2.5.1","wpackagist-plugin/gutenberg": ">=11.8.2","wpackagist-plugin/all-in-one-wp-migration": ">=7.50"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ],
+            "wordpress-install-dir": "."
+        }
+    }
+}

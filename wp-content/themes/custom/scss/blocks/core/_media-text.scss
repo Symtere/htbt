@@ -1,0 +1,27 @@
+.wp-block-media-text {
+    max-width: map-get($container-max-widths,'xxl');
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        width: auto;
+    }
+}
+
+@media (max-width: $screen-wp-sm-max) {
+
+    .wp-block-media-text {
+
+        &.is-stacked-on-mobile {
+
+            .wp-block-media-text__content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .wp-block-media-text__media:first-child {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+}

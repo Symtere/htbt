@@ -1,0 +1,11 @@
+/*
+    Assets path
+    ========================================================================== */
+
+@function img-url($string) {
+    @return url('#{$img-path}#{$string}');
+}
+
+@function svg-url($string) {
+    @return url('#{$svg-path}#{$string}');
+}

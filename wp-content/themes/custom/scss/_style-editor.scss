@@ -1,0 +1,30 @@
+// Core files needs to be first for BS 5 overwrite
+@import 'base/mixins/all';
+@import 'base/variables';
+
+@import 'librairies/bootstrap/functions';
+@import 'librairies/bootstrap/variables';
+@import 'librairies/bootstrap/mixins';
+@import 'librairies/bootstrap/utilities';
+@import 'librairies/bootstrap/root';
+@import 'librairies/bootstrap/reboot';
+@import 'librairies/bootstrap/type';
+@import 'librairies/bootstrap/containers';
+@import 'librairies/bootstrap/grid';
+@import 'librairies/bootstrap/buttons';
+@import 'librairies/bootstrap/helpers';
+@import 'librairies/bootstrap/utilities/api';
+// @import 'librairies/all';
+
+
+@import 'layout/general';
+
+@import 'components/site-colors';
+@import 'components/typography';
+@import 'components/buttons';
+
+
+//@import 'blocks/xxx';
+
+// overwrite if necessary
+//@import 'admin/all';

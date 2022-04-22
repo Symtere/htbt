@@ -1,0 +1,178 @@
+$theme-version: 1.0;
+$theme-name: unquote('webexpr');
+
+//== Projects vars
+$img-path: 'assets/img/';
+$font-path: 'assets/fonts/';
+$svg-path: 'assets/svg/';
+$fa-font-path: 'assets/fonts/fontawesome/webfonts/';
+
+$imp: unquote('!important');
+
+//== Bootstrap Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$screen-sm: map-get($grid-breakpoints, sm);
+$screen-md: map-get($grid-breakpoints, md);
+$screen-lg: map-get($grid-breakpoints, lg);
+$screen-xl: map-get($grid-breakpoints, xl);
+$screen-xxl: map-get($grid-breakpoints, xxl);
+
+$screen-sm-max: ($screen-sm - 1);
+$screen-md-max: ($screen-md - 1);
+$screen-lg-max: ($screen-lg - 1);
+$screen-xl-max: ($screen-xl - 1);
+$screen-xxl-max: ($screen-xxl - 1);
+
+//== Gutenberg breakpoints
+$screen-wp-sm: 601px;
+$screen-wp-md: 782px;
+
+$screen-wp-sm-max: 600px;
+$screen-wp-md-max: 781px;
+
+
+//== Colors
+
+//== Blue
+$blue-palette: (
+    '400': #134396, // primary
+    '100': #e1e3e7,
+);
+$blue-400: map-get($blue-palette,'400');
+$blue-100: map-get($blue-palette,'100');
+
+//== Green
+$green-palette: (
+    '400': #00d084,
+);
+$green-400: map-get($green-palette,'400');
+
+$green-variant-palette: (
+    '500': #00d084,
+);
+$green-variant-500: map-get($green-variant-palette,'500');
+
+//== Back office Gutenberg palettes
+/*
+ * See wp-content/themes/webexpr/scss/components/_site-colors.scss
+*/
+$gutenberg-palettes: (
+    'blue': (
+        '400': $blue-400, // primary
+        '100': $blue-100,
+    ),
+    'green': (
+        '400': $green-400,
+    ),
+    'green-variant': (
+        '500': $green-variant-500,
+    ),
+    'default': (
+         'white': #fff,
+    ),
+);
+
+$body-bg: #fff;
+$body-color: #363636;
+$primary: #e4282b;
+$primary-light: #C1181B;
+$success: #45B384;
+$secondary: #e2e2e2;
+$danger: #ee4141;
+
+// CSS variables
+:root {
+    --we-map-fill-icon-color: #{$primary};
+    --we-map-stroke-icon-color: #000;
+}
+
+
+//== Typography
+//$font-family-sans-serif: 'Inter';
+$ff-fa: 'Font Awesome 5 Pro';
+
+//$headings-font-family: $font-family-sans-serif;
+//$headings-font-weight: 700;
+$h1-font-size: rem(55px);
+$h2-font-size: rem(44px);
+$h3-font-size: rem(36px);
+$h4-font-size: rem(18px);
+
+//== Rgpb
+$rgpb-primary: $primary;
+$rgpb-bg: rgba($rgpb-primary, .95);
+$rpbg-btn-bg-color: #fff;
+$rpbg-btn-bg-border-color: #fff;
+$rpbg-btn-bg-hover: darken($rgpb-primary,2%);
+
+//== Svg
+//$svg-settings: svg-settings(21,21);
+
+//== Navbar
+$aside-menu-primary: $primary;
+$aside-menu-toggler-primary: $aside-menu-primary;
+$dropdown-primary: $primary;
+
+$navbar-light-color: #000;
+$navbar-light-active-color: $primary;
+$navbar-light-hover-color: $navbar-light-active-color;
+
+$header-main-nav-item-active-color: $primary;
+$header-main-nav-item-active-font-weight: 500;
+
+$header-main-nav-item-active-border: false;
+$header-main-nav-item-active-border-color: $primary;
+
+$header-aside-menu-toggler-bg-hover: #fff;
+$header-aside-menu-toggler-color-hover: $aside-menu-toggler-primary;
+$header-aside-menu-toggler-bg-opened: #fff;
+$header-aside-menu-toggler-color-opened: $aside-menu-toggler-primary;
+
+
+//== Aside menu
+$aside-menu-link-bg-color: lighten($aside-menu-primary,20%);
+$aside-menu-link-color: $aside-menu-primary;
+
+$aside-menu-dropdown-item-active-color: $aside-menu-primary;
+$aside-menu-dropdown-link-color: $aside-menu-primary;
+$aside-menu-dropdown-link-hover-bg: transparent;
+$aside-menu-dropdown-link-active-bg: transparent;
+$aside-menu-dropdown-link-active-color: $aside-menu-primary;
+$aside-menu-dropdown-link-hover-color: $aside-menu-primary;
+
+//== Dropdowns
+$dropdown-item-padding-x: .85rem;
+$dropdown-item-padding-y: .65rem;
+$dropdown-border-radius: 0;
+$dropdown-box-shadow: 0 0 1rem rgba(#000, .1);
+$dropdown-border-color: transparent;
+$dropdown-border-width: 0;
+$dropdown-link-color: $dropdown-primary;
+$dropdown-link-hover-bg: #fff;
+$dropdown-link-active-bg: #fff;
+$dropdown-link-active-color: $dropdown-primary;
+$dropdown-link-hover-color: lighten($dropdown-primary,10%);
+$dropdown-font-size: .95rem;
+
+//== Pagination
+$pagination-primary-bg: $primary;
+$pagination-item-bg: #fff;
+$pagination-item-border-color: $primary;
+$pagination-item-color: $primary;
+$pagination-item-bg-hover: $primary;
+$pagination-item-color-hover: #fff;
+$pagination-item-bg-active: $primary;
+$pagination-item-color-active: #fff;
+$pagination-item-dots-bg: $pagination-item-bg;
+$pagination-item-dots-color: $primary;
+$pagination-item-prev-next-bg: #fff;
+$pagination-item-prev-next-color: $primary;
+$pagination-item-prev-next-border-width: 0;

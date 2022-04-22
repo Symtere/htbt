@@ -1,0 +1,61 @@
+.swiper-is-loading {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: 50% svg-url('grid.svg') no-repeat; // change colors in svg file
+        background-size: 40px;
+    }
+    .swiper-wrapper {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.swiper-initialized {
+    overflow: hidden;
+}
+
+.swiper-pagination {
+    margin-top: 1.5rem;
+    position: static;
+
+    &.white-pagination {
+
+        .swiper-pagination-bullet {
+            border: 2px solid #fff;
+
+            &.swiper-pagination-bullet-active {
+                background: #fff;
+            }
+        }
+    }
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 2px solid $primary;
+
+    &.swiper-pagination-bullet-active {
+        background: $primary;
+    }
+}
+
+
+/*
+<div class="my-global-slider my-context-slider">
+    <div id="my-context-slider" class="swiper-is-loading">
+        <div class="my-context-slider-card-list swiper-wrapper">
+            <div class="swiper-slide">My content</div>
+        </div>
+        <div class="swiper-pagination my-global-slider-pagination"></div>
+    </div>
+</div>
+*/

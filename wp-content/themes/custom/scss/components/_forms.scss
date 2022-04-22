@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Ninja form :: Global
+   ========================================================================== */
+
+.nf-btn-submit {
+    padding-left: 1.5rem $imp;
+    padding-right: 1.5rem $imp;
+    background-color: $primary $imp;
+    cursor: pointer;
+    color: #fff $imp;
+
+    &:hover {
+        background-color: lighten($primary,10%) $imp;
+    }
+}
+
+.nf-element {
+
+    &:not(input[type="button"]) {
+        background-color: #fff $imp;
+    }
+}
+
+.nf-form-content {
+    padding-left: 0 $imp;
+    padding-right: 0 $imp;
+
+    .list-select-wrap {
+
+        > div div {
+            z-index: inherit;
+        }
+        div:after {
+            color: $primary $imp;
+        }
+    }
+}
+
+.nf-field-label {
+    color: $primary $imp;
+}
+
+.nf-form-fields-required {
+    font-weight: 600;
+}
+
+.nf-form-title {
+
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary;
+    }
+}
+
+.nf-after-form-content,
+.nf-before-form-content {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8px;
+}
+.nf-before-form-content {
+    margin-bottom: 1rem;
+}
+.nf-after-form-content {
+    margin-bottom: 2rem;
+}
